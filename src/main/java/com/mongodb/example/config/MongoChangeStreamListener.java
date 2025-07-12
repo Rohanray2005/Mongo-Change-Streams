@@ -46,7 +46,7 @@ public class MongoChangeStreamListener {
 //        }
 //    }
 
-    @EventListener(ApplicationReadyEvent.class)
+    @PostConstruct
     public void initiate() {
         executorService.submit(()->{
             System.out.println("Listening to Mongo Changes !! ");
